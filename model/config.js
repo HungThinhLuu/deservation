@@ -1,7 +1,7 @@
-
+require('dotenv').config()
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://hungthinhluu:hungthinhluu12345@cluster0.csitck1.mongodb.net/Reservation_System')
+mongoose.connect(process.env.DATABASE_URI)
   .then(() => console.log("Connect MongoDB successfully!"))
   .catch(error => console.log(error))
 
