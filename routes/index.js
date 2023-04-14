@@ -22,7 +22,7 @@ router.get("/getCSV", async function (req, res) {
   res
     .set({
       "Content-Type": "text/csv",
-      "Content-Disposition": `attachment; filename="users.csv"`,
+      "Content-Disposition": `attachment; filename="${req.query.data}.csv"`,
     })
     .send(csvData)
 
